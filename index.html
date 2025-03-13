@@ -1,0 +1,170 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>LockPW - Settings</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/options.css" />
+
+    <script src="scripts/ga.js"></script>
+    <script src="scripts/md5.js"></script>
+    <script src="scripts/options.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <section class="header">
+        <div class="container-fluid">
+            <header>
+                <img class="logo" src="images/logo.png" alt="Lock Password" />
+
+                <a href="index.html#settings" class="nav-link">
+                    <div class="settings" data-id="settings"></div>
+                </a>
+
+                <a href="index.html#history" class="nav-link">
+                    <div class="history" data-id="history"></div>
+                </a>
+
+                <a href="index.html#help" class="nav-link">
+                    <div class="question" data-id="help"></div>
+                </a>
+            </header>
+        </div>
+    </section>
+
+    <section class="info">
+        <div class="container-fluid">
+            <hgroup>
+                <h1><strong id="i18n_settings_additional"></strong></h1>
+
+                <h2><strong id="i18n_settings"></strong></h2>
+            </hgroup>
+        </div>
+    </section>
+
+    <div class="alert"></div>
+
+    <section class="content">
+        <div class="container-fluid" id="page_settings" style="display: none">
+            <div class="set-all">
+                <div class="element">
+                    <h1 class="w50" id="i18n_auto_lock"></h1>
+                    <input type="checkbox" class="checkbox" id="checkbox_auto_lock" name="autoLock" />
+                    <label for="checkbox_auto_lock"></label>
+                </div>
+
+                <div class="element" id="auto_lock">
+                    <h1 id="i18n_auto_lock_time"></h1>
+                    <label for="auto_lock_time"></label>
+                    <input class="entry-field" type="number" id="auto_lock_time" min="1" />
+                    <span id="i18n_auto_lock_info" class="help"></span>
+                </div>
+
+                <div class="element">
+                    <h1 class="w50" id="i18n_checkbox_history"></h1>
+                    <input type="checkbox" class="checkbox" id="checkbox_history" name="historyRecord" />
+                    <label for="checkbox_history"></label>
+                    <span id="i18n_checkbox_history_info" class="help"></span>
+                </div>
+
+                <div class="element">
+                    <h1 class="w50" id="i18n_checkbox_fullScreen"></h1>
+                    <input type="checkbox" class="checkbox" id="checkbox_fullScreen" name="fullScreen" />
+                    <label for="checkbox_fullScreen"></label>
+                    <span id="i18n_checkbox_fullScreen_info" class="help"></span>
+                </div>
+
+                <div class="element">
+                    <h1 class="w50" id="i18n_checkbox_quick_click"></h1>
+                    <input type="checkbox" class="checkbox" id="checkbox_quick_click" name="quickClick" />
+                    <label for="checkbox_quick_click"></label>
+                    <span id="i18n_checkbox_quick_click_info" class="help"></span>
+                </div>
+
+                <div class="element">
+                    <h1 class="w50" id="i18n_checkbox_minimize"></h1>
+                    <input type="checkbox" class="checkbox" id="checkbox_minimize" name="minimize" />
+                    <label for="checkbox_minimize"></label>
+                    <span id="i18n_minimize_info" class="help"></span>
+                </div>
+
+                <div class="element">
+                    <h1 class="w50" id="i18n_security_mode"></h1>
+                    <input type="checkbox" class="checkbox" id="checkbox_security_mode" name="securityMode" />
+                    <label for="checkbox_security_mode"></label>
+                    <span id="i18n_security_mode_info" class="help"></span>
+                </div>
+
+                <div class="element">
+                    <h1 id="i18n_attempts"></h1>
+                    <input class="entry-field" type="number" id="attempts" min="0" name="attempts" />
+
+                    <h1 id="i18n_attempts_act"></h1><br>
+
+                    <input type="checkbox" class="checkbox" id="checkbox_attempts_act_close"
+                           name="attemptsActionClose" />
+                    <label for="checkbox_attempts_act_close" id="i18n_attempts_act_close"></label> <br><br>
+
+                    <input type="checkbox" class="checkbox" id="checkbox_attempts_act_clear"
+                           name="attemptsActionClear" />
+                    <label for="checkbox_attempts_act_clear" id="i18n_attempts_act_clear"></label> <br><br>
+
+                    <input type="checkbox" class="checkbox" id="checkbox_attempts_act_new" name="attemptsActionNew" />
+                    <label for="checkbox_attempts_act_new" id="i18n_attempts_act_new"></label> <br><br>
+
+                </div>
+            </div>
+            <div class="set-pass">
+                <h1 id="status_lock"></h1>
+                <form>
+                    <input class="entry-field" type="password" id="password" />
+                    <input class="entry-field" type="password" id="password_confirm" />
+                    <input class="entry-field" type="text" id="password_help" />
+                    <input class="button left" type="submit" value="Save" id="save_password" />
+                    <input class="button right img" type="submit" value="" id="password_off" style="display: none;" />
+                </form>
+            </div>
+        </div>
+
+        <div class="container-fluid" id="page_help" style="display: none">
+            <div class="help">
+                <div class="help-description">
+                    <h1 class="title-line"><strong id="i18n_installed_1_t"></strong></h1>
+                    <ol>
+                        <li id="i18n_installed_1_s1"></li>
+                        <li id="i18n_installed_1_s2"></li>
+                    </ol>
+                </div>
+
+                <div class="help-description">
+                    <h1 class="title-line"><strong id="i18n_installed_2_t"></strong></h1>
+                    <ol>
+                        <li id="i18n_installed_2_s1"></li>
+                        <li id="i18n_installed_2_s2"></li>
+                    </ol>
+                </div>
+
+                <div class="help-description footer">
+                    <h1 class="title-line"><strong></strong></h1>
+                    <a class="button right" href="index.html" id="i18n_next"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid" id="page_history" style="display:none;">
+            <table class="rwd-table">
+                <thead>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Act</th>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+</div>
+</body>
+
+</html>

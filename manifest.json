@@ -1,0 +1,46 @@
+{
+  "author": "SofWar",
+  "name": "__MSG_appName__",
+  "short_name": "__MSG_appShortDesc__",
+  "default_locale": "en",
+  "description": "__MSG_appDesc__",
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "icons": {
+    "16": "images/icons/16.png",
+    "19": "images/icons/19.png",
+    "32": "images/icons/32.png",
+    "48": "images/icons/48.png",
+    "128": "images/icons/128.png"
+  },
+  "manifest_version": 3,
+  "offline_enabled": true,
+  "options_page": "index.html",
+  "permissions": [
+    "contextMenus",
+    "idle",
+    "storage"
+  ],
+  "optional_permissions": [
+    "history"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "7.0.3",
+  "commands": {
+    "lockON": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+L",
+        "mac": "Command+Shift+L"
+      },
+      "description": "Lock browser"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "web_accessible_resources": [{
+    "resources": ["/scripts/md5.js"],
+    "matches": ["<all_urls>"]
+  }]
+}
