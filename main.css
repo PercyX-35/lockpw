@@ -1,0 +1,167 @@
+body {
+    overflow: hidden;
+    margin: 0;
+
+    font: bold 14px Arial, Helvetica, sans-serif;
+
+    background-color: #333F50;
+    background-image: -webkit-linear-gradient(top, #333F50, #293340);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+form.login {
+    position: absolute;
+
+    width: 300px;
+    height: 33px;
+    padding: 7px 0 0 7px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    overflow: hidden;
+}
+
+form.login > input[type="password"] {
+    width: 155px;
+    height: 31px;
+    padding: 8px 30px 8px 5px;
+    float: left;
+    border: 0;
+    border-radius: 3px;
+    font: bold 18px Arial, Helvetica, sans-serif;
+    transition: background 1s ease-out;
+}
+
+form.login > input[type="password"]:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(82, 168, 236, .6);
+}
+
+form.login > input[type="password"]::-webkit-input-placeholder {
+    color: #999;
+    font-weight: normal;
+}
+
+form.login > button {
+    cursor: pointer;
+    float: right;
+    border: 0;
+    height: 31px;
+    width: 100px;
+    padding: 0 10px;
+    font: bold 15px Arial, Helvetica, sans-serif;
+    color: #fafafa;
+    background-color: #0BB586;
+    background-image: -webkit-linear-gradient(top, #0BB586, #088662);
+    border-radius: 3px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+}
+
+form.login > button:hover, form.login > button:focus {
+    background-color: #0BB586;
+    background-image: -webkit-linear-gradient(top, #088662, #0BB586);
+}
+
+form.login > button:active {
+    outline: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+}
+
+form.login > span#help {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    top: 20px;
+    left: 182px;
+    color: #FFF;
+    text-align: center;
+    font-size: 19px;
+    background: #999;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    margin: 6px 0 0 12px;
+    outline: 0;
+    transition: background 0.2s ease-out;
+}
+
+form.login > span#help:hover {
+    background: #555;
+}
+
+form.login > input.wrong {
+    background: rgba(227, 53, 41, 0.7);
+}
+
+#help_view {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+#help_view > span#close {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font: bold 18px Arial, Helvetica, sans-serif;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    outline: 0;
+    text-decoration: none;
+    color: #000;
+    z-index: 999;
+}
+
+#help_view > span#close:before, #help_view > span#close:after {
+    content: '';
+    height: 3px;
+    width: 16px;
+    display: block;
+    background: #000;
+    border-radius: 10px;
+    position: absolute;
+    top: 9px;
+    left: 2px;
+    transform: rotate(-45deg);
+}
+
+#help_view > span#close:after {
+    transform: rotate(45deg);
+}
+
+#help_view > div#hint {
+    font-size: 12px;
+    color: #FFF;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+#help_view > div#hint > b {
+    font-size: 14px;
+}
+
+#att {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font: bold 12px Arial, Helvetica, sans-serif;
+    color: #FFF;
+}
